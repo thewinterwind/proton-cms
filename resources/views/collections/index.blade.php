@@ -1,79 +1,39 @@
 @extends('layouts.app')
 
 @section('content')
-<div>
-    <div class="notification mb-0 is-size-6 is-flex">
-        <img src="/images/ok_icon.png" class="mr-4">
-        Collection was successfully added!
-    </div>
 
-    <div class="is-flex is-justify-content-space-between px-5 pt-4">
-        <h1>Collections</h1>
-        <a href="#">
-            <label class="is-align-self-center is-size-6">New <span class="pl-2">+</span></label>
-        </a>
-    </div>
+@component('components.notification')
+    @slot('title') Collection was successfully added! @endslot
+@endcomponent
 
-    <div class="box-container">
-        <a href="#">
-            <div class="is-flex is-align-self-center">
-                <div class="is-flex-grow-2">
-                    <h2 class="is-size-4">Last 30 Days</h2>
-                    <label>23 Media, 16 Posts</label>
-                </div>
-                <div class="is-align-self-center">
-                    <img src="/images/Shape.png" class="arrow">
-                </div>
-            </div>
-        </a>
-    </div>
+@component('components.title_type_2')
+    @slot('title') Collections @endslot
+@endcomponent
 
-    <div class="border-t">
-        <div class="box-container">
-            <a href="#">
-                <div class="is-flex is-align-self-center">
-                    <div class="is-flex-grow-2">
-                        <h2 class="is-size-4">E-commerce</h2>
-                        <label>17 Media, 9 Posts</label>
-                    </div>
-                    <div class="is-align-self-center">
-                        <img src="/images/Shape.png" class="arrow">
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
+@component('components.collections')
+    @slot('title') Last 30 Days @endslot
+    @slot('mediaPosts') 23 Media, 16 Posts @endslot
+@endcomponent
 
-    <div class="border-t">
-        <div class="box-container">
-            <a href="#">
-                <div class="is-flex is-align-self-center">
-                    <div class="is-flex-grow-2">
-                        <h2 class="is-size-4">Entertainment</h2>
-                        <label>15 Media, 28 Posts</label>
-                    </div>
-                    <div class="is-align-self-center">
-                        <img src="/images/Shape.png" class="arrow">
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <div class="border-t">
-        <div class="box-container">
-            <a href="#">
-                <div class="is-flex is-align-self-center">
-                    <div class="is-flex-grow-2">
-                        <h2 class="is-size-4">Finance</h2>
-                        <label>8 Media, 4 Posts</label>
-                    </div>
-                    <div class="is-align-self-center">
-                        <img src="/images/Shape.png" class="arrow">
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
+<div class="border-t pt-5">
+    @component('components.collections')
+        @slot('title') E-commerce @endslot
+        @slot('mediaPosts') 17 Media, 9 Posts @endslot
+    @endcomponent
 </div>
+
+<div class="border-t pt-5">
+    @component('components.collections')
+        @slot('title') Entertainment @endslot
+        @slot('mediaPosts') 15 Media, 28 Posts @endslot
+    @endcomponent
+</div>
+
+<div class="border-t pt-5">
+    @component('components.collections')
+        @slot('title') Finance @endslot
+        @slot('mediaPosts') 8 Media, 4 Posts @endslot
+    @endcomponent
+</div>
+
 @endsection

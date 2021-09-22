@@ -1,7 +1,7 @@
 <div class="box-container pt-0">
     <div class="is-flex is-justify-content-space-between">
         <label>{{ $category }}</label>
-        <label>{{ $time }} read</label>
+        <label>{{ $time }} min read</label>
     </div>
     <a href="#">
         <div class="is-flex is-align-self-center">

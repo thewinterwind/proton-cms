@@ -48,7 +48,6 @@
 
         burger.addEventListener('click', function() {
             nav.classList.toggle('is-active');
-            console.log('ok nav')
         });
 
         dropdown.addEventListener('click', function(event) {

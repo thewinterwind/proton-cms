@@ -260,6 +260,25 @@
       line-height: 1rem;
       margin-top: 20px;
     }
+
+    .tab-pane {
+        display: none;
+    }
+
+    .is-active {
+        display: initial;
+    }
+
+    .arrow {
+        height: 8px;
+    }
+
+    .c-fields {
+        input {
+            border: 0;
+            box-shadow: none;
+        }
+    }
 }
 
 .b-btm {
@@ -487,6 +506,8 @@ label {
 footer {
     background: black;
     padding: 24px 23px 50px 24px;
+    // position: relative;
+    // top: 133px;
     h3 {
         color: white;
         font-weight: 600;

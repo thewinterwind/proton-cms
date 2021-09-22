@@ -8,88 +8,34 @@
         <p class="text-gray has-text-weight-bold fs-14">I deal with finance and management. I love this business and share it with everyone. I also love to write articles, I will gladly share these articles with you.</p>
     </div>
 
-    <div class="border-t">
-        <div class="box-container">
-            <div class="is-flex is-justify-content-space-between">
-                <label>Finance</label>
-                <label>8 min read</label>
-            </div>
-            <a href="#">
-                <div class="is-flex is-align-self-center">
-                    <div class="is-flex-grow-2">
-                        <h2 class="is-size-4">How to make money online?</h2>
-                    </div>
-                    <div class="is-align-self-center">
-                        <img src="/images/Shape.png" height="8px">
-                    </div>
-                </div>
-            </a>
-        </div>
+    <div class="border-t pt-5">
+        @component('components.post_type_2')
+            @slot('category') Finance @endslot
+            @slot('time') 8 @endslot
+            @slot('title') How to make money online? @endslot
+        @endcomponent
     </div>
-    <div class="border-t">
-        <div class="box-container">
-            <div class="is-flex is-justify-content-space-between">
-                <label>Finance</label>
-                <label>8 min read</label>
-            </div>
-            <a href="#">
-                <div class="is-flex is-align-self-center">
-                    <div class="is-flex-grow-2">
-                        <h2 class="is-size-4">How to make money online?</h2>
-                    </div>
-                    <div class="is-align-self-center">
-                        <img src="/images/Shape.png" height="8px">
-                    </div>
-                </div>
-            </a>
-        </div>
+    <div class="border-t pt-5">
+        @component('components.post_type_2')
+            @slot('category') Entertainment @endslot
+            @slot('time') 5 @endslot
+            @slot('title') How to organize an event? @endslot
+        @endcomponent
     </div>
-    <div class="border-t">
-        <div class="box-container">
-            <div class="is-flex is-justify-content-space-between">
-                <label>Entertainment</label>
-                <label>5 min read</label>
-            </div>
-            <a href="#">
-                <div class="is-flex is-align-self-center">
-                    <div class="is-flex-grow-2">
-                        <h2 class="is-size-4">How to organize an event?</h2>
-                    </div>
-                    <div class="is-align-self-center">
-                        <img src="/images/Shape.png" height="8px">
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="border-t">
-        <div class="box-container">
-            <div class="is-flex is-justify-content-space-between">
-                <label>E-commerce</label>
-                <label>6 min read</label>
-            </div>
-            <a href="#">
-                <div class="is-flex is-align-self-center">
-                    <div class="is-flex-grow-2">
-                        <h2 class="is-size-4">What are the benefit of e-commerce?</h2>
-                    </div>
-                    <div class="is-align-self-center">
-                        <img src="/images/Shape.png" height="8px">
-                    </div>
-                </div>
-            </a>
-        </div>
+    <div class="border-t pt-5">
+        @component('components.post_type_2')
+            @slot('category') E-commerce @endslot
+            @slot('time') 6 @endslot
+            @slot('title') What are the benefit of e-commerce? @endslot
+        @endcomponent
     </div>
     <div class="border-t">
         <a href="#">
-            <div class="box-container">
-                <div class="is-flex is-align-self-center">
-                    <h2 class="is-size-4">More Posts</h2>
-                    <div class="is-align-self-center ml-3">
-                        <img src="/images/Shape.png" height="8px">
-                    </div>
-                </div>
-            </div>
+            @component('components.subtitle')
+                @slot('category') E-commerce @endslot
+                @slot('time') 6 @endslot
+                @slot('title') What are the benefit of e-commerce? @endslot
+            @endcomponent
         </a>
     </div>
 </div>

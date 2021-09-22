@@ -6,31 +6,57 @@
         @slot('title') Categories @endslot
     @endcomponent
 
-    @component('components.title_type_1')
-        @slot('title') E-commerce @endslot
-        @slot('posts') 12 @endslot
-    @endcomponent
+    <div class="box-container pt-0">
+        <a href="{{ url('/categories/category-name') }}">
+            <div class="is-flex is-align-self-center mt-2">
+                <div class="is-flex-grow-2">
+                    <h2 class="is-size-4 px-0">E-commerce</h2>
+                </div>
+                <div class="is-flex is-align-self-center">
+                    <h2 class="num-posts">12 posts</h2>
+                    <div class="pl-3 is-align-self-center">
+                        <img src="/images/Shape.png" height="8px">
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 
-    @component('components.title_type_1')
-        <div class="border-t">
-            @slot('title') Entertainment @endslot
-            @slot('posts') 25 @endslot
+    <div class="border-t">
+        <div class="box-container">
+            <a href="#">
+                <div class="is-flex is-align-self-center mt-2">
+                    <div class="is-flex-grow-2">
+                        <h2 class="is-size-4 px-0">Entertainment</h2>
+                    </div>
+                    <div class="is-flex is-align-self-center">
+                        <h2 class="num-posts">25 posts</h2>
+                        <div class="pl-3 is-align-self-center">
+                            <img src="/images/Shape.png" height="8px">
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
-    @endcomponent
+    </div>
 
-    @component('components.title_type_1')
-        <div class="border-t">
-            @slot('title') Finance @endslot
-            @slot('posts') 9 @endslot
+    <div class="border-t">
+        <div class="box-container">
+            <a href="#">
+                <div class="is-flex is-align-self-center mt-2">
+                    <div class="is-flex-grow-2">
+                        <h2 class="is-size-4 px-0">Finance</h2>
+                    </div>
+                    <div class="is-flex is-align-self-center">
+                        <h2 class="num-posts">9 posts</h2>
+                        <div class="pl-3 is-align-self-center">
+                            <img src="/images/Shape.png" height="8px">
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
-    @endcomponent
-
-    @component('components.title_type_1')
-        <div class="border-t">
-            @slot('title') Finance @endslot
-            @slot('posts') 9 @endslot
-        </div>
-    @endcomponent
+    </div>
 
     <div class="border-t">
         <div class="box-container">

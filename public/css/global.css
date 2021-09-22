@@ -219,6 +219,19 @@
   line-height: 1rem;
   margin-top: 20px;
 }
+#row_level_components .tab-pane {
+  display: none;
+}
+#row_level_components .is-active {
+  display: initial;
+}
+#row_level_components .arrow {
+  height: 8px;
+}
+#row_level_components .c-fields input {
+  border: 0;
+  box-shadow: none;
+}
 
 .b-btm {
   padding-bottom: 9px;

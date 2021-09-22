@@ -7,16 +7,17 @@
         <p class="p-sen text-gray">Deleting this collection will not delete any associated media or posts. However, this will delete the association of this collection with any content. Are you sure you want to delete this collection? If so, type the name of the tag below and press the delete button.</p>
     </div>
 
-    <form>
-        <div class="box-container">
-            <div class="field mt-5">
-                <label class="help mt-0 pl-3">URL Slug</label>
-                <div class="control">
-                    <input class="input" type="text">
-                </div>
-            </div>
+    <form class="mb-6 pb-5">
+        <div class="mt-5">
+            @component('components.input_type_1')
+                @slot('title') URL Slug @endslot
+            @endcomponent
+        </div>
 
-            <button class="button is-black mt-5 mb-6">Delete</button>
+        <div class="mt-4">
+            @component('components.button_type_1')
+                @slot('title') Delete @endslot
+            @endcomponent
         </div>
     </form>
 </div>

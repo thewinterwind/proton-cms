@@ -6,9 +6,9 @@
                     <img src="/images/category-img.png" class="category-img">
                 </div>
                 <div>
-                    <label>Entertainment</label>
-                    <h2 class="is-size-4 px-0">Dropshipping</h2>
-                    <label>5 min read</label>
+                    <label>{{ $category }}</label>
+                    <h2 class="is-size-4 px-0">{{ $title }}</h2>
+                    <label>{{ $time }} min read</label>
                 </div>
             </div>
             <div class="is-align-self-center">
