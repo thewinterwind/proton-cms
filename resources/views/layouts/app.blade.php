@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="@stack('html-class')">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,33 +23,36 @@
 <body>
 
 <div id="app">
-    <div id="row_level_components">
+    <div id="row_level_components" >
         @include('includes.navbar')
 
-        <main>
-            @yield('content')
-        </main>
+        @yield('content')
 
         @include('includes.footer')
-
-        @stack('js')
     </div>
 
+    @stack('js')
 </div>
 
 </body>
 
 <script>
     (function (){
+
+        // Tags Input
+        bulmaTagsinput.attach();
+
         // Open menu
         var burger = document.querySelector('.navbar-burger');
         var nav = document.querySelector('#'+burger.dataset.target);
         var dropdown = document.querySelector('.dropdown');
 
+        // Navbar
         burger.addEventListener('click', function() {
             nav.classList.toggle('is-active');
         });
 
+        // Nav tabs
         dropdown.addEventListener('click', function(event) {
           event.stopPropagation();
           dropdown.classList.toggle('is-active');
@@ -59,7 +62,25 @@
             nav.classList.toggle('is-active');
         });
 
-        bulmaTagsinput.attach();
+        // Dark mode
+        document.querySelectorAll('.dark').forEach((result)=> {
+            result.classList.toggle('invert');
+        })
     })();
+
+    window.onload = () => {
+            // Tabs Start
+            document.querySelectorAll('.tabs').forEach((tab)=>{
+                tab.querySelectorAll('li').forEach((li)=>{
+                  li.onclick = () => {
+                      tab.querySelector('li.is-active').classList.remove('is-active')
+                      li.classList.add('is-active')
+                      tab.nextElementSibling.querySelector('.tab-pane.is-active').classList.remove('is-active')
+                      tab.nextElementSibling.querySelector('.tab-pane#'+li.firstElementChild.getAttribute('id'))
+                        .classList.add("is-active")
+                  }
+                })
+            })
+        }
 </script>
 </html>

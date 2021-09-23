@@ -1,3 +1,19 @@
+.dark {
+  filter: invert(1) hue-rotate(180deg);
+}
+.dark .categories img, .dark video {
+  filter: invert(1) hue-rotate(180deg);
+}
+.dark .button-black {
+  background-color: #302F2F !important;
+}
+.dark footer.inverted {
+  background-color: #191919 !important;
+}
+.dark .inverted {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 #row_level_components .input_type, #row_level_components .button_type {
   padding: 0 24px 0 23px;
   margin-top: 3rem;
@@ -15,6 +31,9 @@
 #row_level_components textarea {
   border-radius: 0;
   border: 1px solid black;
+}
+#row_level_components input {
+  font-weight: 600;
 }
 #row_level_components .c-color {
   padding: 13px;
@@ -166,6 +185,29 @@
 #row_level_components .w-full {
   width: 100%;
 }
+#row_level_components .tabs ul {
+  border-bottom-color: transparent;
+  border-bottom-style: none;
+}
+#row_level_components .tabs ul li {
+  border-bottom-color: transparent;
+  border-bottom-style: none;
+}
+#row_level_components .tabs ul li a {
+  padding: 0 0 12px 0;
+  margin-right: 24px;
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom-style: none;
+}
+#row_level_components .tabs ul li.is-active a {
+  border-bottom: 2px solid black;
+  color: black;
+  padding: 0 0 12px 0;
+  font-weight: 600;
+  font-size: 18px;
+}
 #row_level_components .zip-modal .modal-card {
   height: 100%;
 }
@@ -222,15 +264,23 @@
 #row_level_components .tab-pane {
   display: none;
 }
-#row_level_components .is-active {
-  display: initial;
-}
 #row_level_components .arrow {
   height: 8px;
 }
 #row_level_components .c-fields input {
   border: 0;
   box-shadow: none;
+}
+#row_level_components .tab-pane.is-active {
+  display: initial;
+}
+#row_level_components .category-img {
+  width: 80px;
+  height: 80px;
+}
+#row_level_components .category-img-full {
+  height: 152px;
+  width: 100%;
 }
 
 .b-btm {
@@ -333,21 +383,6 @@ label {
   line-height: 16px;
 }
 
-.categories .category-img {
-  width: 80px;
-  height: 80px;
-}
-.categories .category-img-full {
-  height: 152px;
-  width: 100%;
-}
-.categories .arrow {
-  height: 8px;
-}
-.categories .arrow-page {
-  height: 10px;
-}
-
 .num-posts {
   color: rgba(0, 0, 0, 0.3);
   font-size: 24px;
@@ -391,6 +426,7 @@ label {
 
 .notification, .notification-red {
   color: black;
+  border-radius: 0;
   font-weight: 600;
 }
 
@@ -401,30 +437,6 @@ label {
 .notification-red {
   background: #FF6363;
   padding: 16px;
-}
-
-.tabs ul {
-  border-bottom-color: transparent;
-  border-bottom-style: none;
-}
-.tabs ul li {
-  border-bottom-color: transparent;
-  border-bottom-style: none;
-}
-.tabs ul li a {
-  padding: 0 0 12px 0;
-  margin-right: 24px;
-  color: rgba(0, 0, 0, 0.3);
-  font-weight: 600;
-  font-size: 18px;
-  border-bottom-style: none;
-}
-.tabs ul li.is-active a {
-  border-bottom: 2px solid black;
-  color: black;
-  padding: 0 0 12px 0;
-  font-weight: 600;
-  font-size: 18px;
 }
 
 .btn-sort {
@@ -447,7 +459,7 @@ label {
 }
 
 footer {
-  background: black;
+  background-color: black;
   padding: 24px 23px 50px 24px;
 }
 footer h3 {

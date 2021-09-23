@@ -1,4 +1,4 @@
-<footer>
+<footer class="inverted">
     <h3 class="is-size-5 mb-3">Proton</h3>
     <p>Dream big. Stay Curious. Be great. Do you</p>
 

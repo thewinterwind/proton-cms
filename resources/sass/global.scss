@@ -1,5 +1,21 @@
-// Row level components
+// Dark mode
+.dark {
+    filter: invert(1) hue-rotate(180deg);
+    .categories img, video {
+        filter: invert(1) hue-rotate(180deg);
+    }
+    .button-black {
+        background-color: #302F2F !important;
+    }
+    footer.inverted {
+        background-color: #191919 !important;
+    }
+    .inverted {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
 
+// Row level components
 #row_level_components {
     .input_type, .button_type {
         padding: 0 24px 0 23px;
@@ -22,6 +38,10 @@
     textarea {
         border-radius: 0;
         border: 1px solid black;
+    }
+
+    input {
+        font-weight: 600;
     }
 
     .c-color {
@@ -196,6 +216,32 @@
         width: 100%;
     }
 
+    .tabs {
+        ul {
+            border-bottom-color: transparent;
+            border-bottom-style: none;
+            li {
+                border-bottom-color: transparent;
+                border-bottom-style: none;
+                a {
+                    padding: 0 0 12px 0;
+                    margin-right: 24px;
+                    color: rgba(0, 0, 0, 0.3);
+                    font-weight: 600;
+                    font-size: 18px;
+                    border-bottom-style: none;
+                }
+            }
+            li.is-active a {
+                border-bottom: 2px solid black;
+                color: black;
+                padding: 0 0 12px 0;
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+    }
+
     .zip-modal {
         .modal-card {
             height: 100%;
@@ -265,10 +311,6 @@
         display: none;
     }
 
-    .is-active {
-        display: initial;
-    }
-
     .arrow {
         height: 8px;
     }
@@ -278,6 +320,19 @@
             border: 0;
             box-shadow: none;
         }
+    }
+
+    .tab-pane.is-active {
+        display: initial;
+    }
+
+    .category-img {
+        width: 80px;
+        height: 80px;
+    }
+    .category-img-full {
+        height: 152px;
+        width: 100%
     }
 }
 
@@ -360,7 +415,6 @@ body {
     background: white;
 }
 
-
 .box-container {
     padding: 24px 23px 24px 24px;
     h2 {
@@ -382,23 +436,6 @@ label {
     font-weight: 600;
     font-size: 14px;
     line-height: 16px;
-}
-
-.categories {
-    .category-img {
-        width: 80px;
-        height: 80px;
-    }
-    .category-img-full {
-        height: 152px;
-        width: 100%
-    }
-    .arrow {
-        height: 8px;
-    }
-    .arrow-page {
-        height: 10px;
-    }
 }
 
 .num-posts {
@@ -446,6 +483,7 @@ label {
 
 .notification, .notification-red {
     color: black;
+    border-radius: 0;
     font-weight: 600;
 }
 
@@ -456,32 +494,6 @@ label {
 .notification-red {
     background: #FF6363;
     padding: 16px;
-}
-
-.tabs {
-    ul {
-        border-bottom-color: transparent;
-        border-bottom-style: none;
-        li {
-            border-bottom-color: transparent;
-            border-bottom-style: none;
-            a {
-                padding: 0 0 12px 0;
-                margin-right: 24px;
-                color: rgba(0, 0, 0, 0.3);
-                font-weight: 600;
-                font-size: 18px;
-                border-bottom-style: none;
-            }
-        }
-        li.is-active a {
-            border-bottom: 2px solid black;
-            color: black;
-            padding: 0 0 12px 0;
-            font-weight: 600;
-            font-size: 18px;
-        }
-    }
 }
 
 .btn-sort {
@@ -504,7 +516,7 @@ label {
 }
 
 footer {
-    background: black;
+    background-color: black;
     padding: 24px 23px 50px 24px;
     // position: relative;
     // top: 133px;

@@ -12,10 +12,10 @@
     <div id="navMenu" class="navbar-menu pt-0">
         <a href="{{ url('/dashboard') }}">Dashboard</a> <br>
         <a href="{{ url('/collections') }}">Collections</a> <br>
-        <a href="#">Assets</a> <br>
-        <a href="#">Posts</a> <br>
-        <a href="#">Templates</a> <br>
-        <a href="#">Settings</a> <br>
+        <a href="{{ url('/assets') }}">Assets</a> <br>
+        <a href="{{ url('/posts') }}">Posts</a> <br>
+        <a href="{{ url('/templates') }}">Templates</a> <br>
+        <a href="{{ url('/settings') }}">Settings</a> <br>
         <a href="#" class="logout">Logout</a> <br>
 
     </div>

@@ -81,7 +81,7 @@
 
 @endsection
 
-@push('js')
+{{-- @push('js')
     <script>
         window.onload = () => {
             // Tabs Start
@@ -98,4 +98,4 @@
             })
         }
     </script>
-@endpush
+@endpush --}}
