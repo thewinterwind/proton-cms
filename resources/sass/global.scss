@@ -15,6 +15,50 @@
     }
 }
 
+// Video Feed
+.feed {
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+
+    .header_feed {
+        padding: 19.5px 19.5px 40px 19.5px;
+        img {
+            border-radius: 50%;
+        }
+        h5 {
+            font-size: 14px;
+        }
+    }
+
+    .mid_feed {
+        display: grid;
+        min-height: 350px;
+        background: transparent;
+        img, video {
+            margin: auto;
+            width: 100%;
+        }
+    }
+
+    .btm_feed {
+        padding: 40px 19.5px 19.5px 19.5px;
+        h5 {
+            font-size: 18px;
+        }
+        p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .options {
+            border-top: 1.4px solid rgba(255, 255, 255, 0.2);
+            padding: 20px 0;
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
 // Row level components
 #row_level_components {
     .input_type, .button_type {

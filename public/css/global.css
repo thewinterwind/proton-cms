@@ -14,6 +14,47 @@
   filter: invert(1) hue-rotate(180deg);
 }
 
+.feed {
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.feed .header_feed {
+  padding: 19.5px 19.5px 40px 19.5px;
+}
+.feed .header_feed img {
+  border-radius: 50%;
+}
+.feed .header_feed h5 {
+  font-size: 14px;
+}
+.feed .mid_feed {
+  display: grid;
+  min-height: 350px;
+  background: transparent;
+}
+.feed .mid_feed img, .feed .mid_feed video {
+  margin: auto;
+  width: 100%;
+}
+.feed .btm_feed {
+  padding: 40px 19.5px 19.5px 19.5px;
+}
+.feed .btm_feed h5 {
+  font-size: 18px;
+}
+.feed .btm_feed p {
+  color: rgba(255, 255, 255, 0.8);
+}
+.feed .btm_feed .options {
+  border-top: 1.4px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 0;
+}
+.feed .btm_feed .options span {
+  font-weight: 600;
+}
+
 #row_level_components .input_type, #row_level_components .button_type {
   padding: 0 24px 0 23px;
   margin-top: 3rem;
