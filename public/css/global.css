@@ -38,6 +38,20 @@
   margin: auto;
   width: 100%;
 }
+.feed .mid_feed iframe video {
+  width: 100%;
+}
+.feed .mid_feed .play-btn {
+  border-radius: 50%;
+  border: none;
+  top: 45%;
+  right: 45%;
+  padding: 17.5px 19px 17.5px 23px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.24);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
 .feed .btm_feed {
   padding: 40px 19.5px 19.5px 19.5px;
 }
@@ -51,10 +65,235 @@
   border-top: 1.4px solid rgba(255, 255, 255, 0.2);
   padding: 20px 0;
 }
-.feed .btm_feed .options span {
+.feed .btm_feed .options span, .feed .btm_feed .options label {
   font-weight: 600;
+  font-size: 12px;
+}
+.feed .btm_feed .text-desc, .feed .btm_feed [class*=reaction-], .feed .btm_feed .field-reactions, .feed .btm_feed .field-reactions:checked:focus ~ .text-desc {
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  position: absolute;
+  top: -60px;
+  left: 0;
+}
+.feed .btm_feed .field-reactions:focus ~ .text-desc, .feed .btm_feed .box:hover [class*=reaction-], .feed .btm_feed .field-reactions:checked ~ [class*=reaction-] {
+  clip: auto;
+  overflow: visible;
+  opacity: 1;
+}
+.feed .btm_feed .main-title {
+  background: #3a5795;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.feed .btm_feed .text-desc {
+  font-weight: normal;
+  text-align: center;
+  transform: translateY(-50px);
+  white-space: nowrap;
+  font-size: 13px;
+  width: 100%;
+}
+.feed .btm_feed [class*=reaction-] {
+  border: none;
+  background-image: url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yh/r/sqhTN9lgaYm.png);
+  background-color: transparent;
+  display: block;
+  cursor: pointer;
+  height: 52px;
+  position: absolute;
+  width: 52px;
+  z-index: 11;
+  transform-origin: 50% 100%;
+  transform: scale(0.1);
+  transition: all 0.3s;
+  outline: none;
+  will-change: transform;
+  opacity: 0;
+}
+.feed .btm_feed .box {
+  position: relative;
+  width: 75px;
+  padding: 0;
+  height: auto;
+  box-shadow: none;
+  background-color: transparent;
+}
+.feed .btm_feed .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  visibility: hidden;
+}
+.feed .btm_feed .field-reactions:focus ~ .label-reactions {
+  border-color: rgba(88, 144, 255, 0.3);
+}
+.feed .btm_feed .field-reactions:checked:focus ~ .label-reactions {
+  border-color: transparent;
+}
+.feed .btm_feed .label-reactions {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  width: 50px;
+  color: white;
+  cursor: pointer;
+}
+.feed .btm_feed .toolbox {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.15s;
+  left: -20px;
+  top: -100px;
+  width: 414px;
+  height: 80px;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.72);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.feed .btm_feed .toolbox:after {
+  content: "";
+  border-top: 15px solid rgba(0, 0, 0, 0.72);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  margin-top: 79px;
+  margin-left: 14px;
+  position: absolute;
+}
+.feed .btm_feed .legend-reaction {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.64);
+  display: inline-block;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  line-height: 20px;
+  max-width: 100%;
+  opacity: 1;
+  overflow: hidden;
+  padding: 0 6px;
+  transition: opacity 50ms ease;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  transform: translateX(-50%);
+}
+.feed .btm_feed .box:hover [class*=reaction-] {
+  transform: scale(0.8) translateY(-40px);
+}
+.feed .btm_feed .box:hover [class*=reaction-]:hover, .feed .btm_feed .box:hover [class*=reaction-]:focus {
+  transition: all 0.2s ease-in;
+  transform: scale(1) translateY(-35px);
+}
+.feed .btm_feed .box:hover [class*=reaction-]:hover .legend-reaction, .feed .btm_feed .box:hover [class*=reaction-]:focus .legend-reaction {
+  opacity: 1;
+}
+.feed .btm_feed .box:hover .toolbox {
+  opacity: 1;
+}
+.feed .btm_feed .box:hover .toolbox {
+  visibility: visible;
+}
+.feed .btm_feed .box:hover .reaction-love {
+  transition-delay: 0.06s;
+}
+.feed .btm_feed .box:hover .reaction-haha {
+  transition-delay: 0.09s;
+}
+.feed .btm_feed .box:hover .reaction-wow {
+  transition-delay: 0.12s;
+}
+.feed .btm_feed .box:hover .reaction-sad {
+  transition-delay: 0.15s;
+}
+.feed .btm_feed .box:hover .reaction-angry {
+  transition-delay: 0.18s;
+}
+.feed .btm_feed .field-reactions:checked ~ [class*=reaction-] {
+  transform: scale(0.8) translateY(-40px);
+}
+.feed .btm_feed .field-reactions:checked ~ [class*=reaction-]:hover, .feed .btm_feed .field-reactions:checked ~ [class*=reaction-]:focus {
+  transition: all 0.2s ease-in;
+  transform: scale(1) translateY(-35px);
+}
+.feed .btm_feed .field-reactions:checked ~ [class*=reaction-]:hover .legend-reaction, .feed .btm_feed .field-reactions:checked ~ [class*=reaction-]:focus .legend-reaction {
+  opacity: 1;
+}
+.feed .btm_feed .field-reactions:checked ~ .toolbox {
+  opacity: 1;
+}
+.feed .btm_feed .field-reactions:checked ~ .toolbox,
+.feed .btm_feed .field-reactions:checked ~ .overlay {
+  visibility: visible;
+}
+.feed .btm_feed .field-reactions:checked ~ .reaction-love {
+  transition-delay: 0.03s;
+}
+.feed .btm_feed .field-reactions:checked ~ .reaction-haha {
+  transition-delay: 0.09s;
+}
+.feed .btm_feed .field-reactions:checked ~ .reaction-wow {
+  transition-delay: 0.12s;
+}
+.feed .btm_feed .field-reactions:checked ~ .reaction-sad {
+  transition-delay: 0.15s;
+}
+.feed .btm_feed .field-reactions:checked ~ .reaction-angry {
+  transition-delay: 0.18s;
+}
+.feed .btm_feed .reaction-like {
+  left: 0;
+  background-position: 0 -144px;
+}
+.feed .btm_feed .reaction-love {
+  background-position: 0 -192px;
+  left: 57px;
+}
+.feed .btm_feed .reaction-haha {
+  background-position: 0 -96px;
+  left: 112px;
+}
+.feed .btm_feed .reaction-wow {
+  background-position: 0 -288px;
+  left: 169px;
+}
+.feed .btm_feed .reaction-sad {
+  background-position: 0 -240px;
+  left: 224px;
+}
+.feed .btm_feed .reaction-angry {
+  left: 280px;
 }
 
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+  .feed .btm_feed .reaction-love {
+    left: 63px;
+  }
+  .feed .btm_feed .reaction-haha {
+    left: 127px;
+  }
+  .feed .btm_feed .reaction-wow {
+    left: 190px;
+  }
+  .feed .btm_feed .reaction-sad {
+    left: 255px;
+  }
+  .feed .btm_feed .reaction-angry {
+    left: 320px;
+  }
+}
 #row_level_components .input_type, #row_level_components .button_type {
   padding: 0 24px 0 23px;
   margin-top: 3rem;
@@ -322,6 +561,30 @@
 #row_level_components .category-img-full {
   height: 152px;
   width: 100%;
+}
+#row_level_components #comment-modal .modal-card-head {
+  display: block;
+  background-color: white;
+  border-radius: 0;
+}
+#row_level_components #comment-modal .profile-icon {
+  border-radius: 50%;
+}
+#row_level_components #comment-modal .field {
+  width: 100%;
+}
+#row_level_components #comment-modal .field .textarea {
+  border: 0;
+  box-shadow: none;
+  width: 100%;
+  resize: none;
+}
+#row_level_components #comment-modal .btn-reply {
+  border: none;
+  background-color: transparent;
+}
+#row_level_components #comment-modal .active-comment {
+  background-color: #F1F4F8;
 }
 
 .b-btm {

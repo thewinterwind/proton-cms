@@ -30,7 +30,7 @@
         </div>
 
         <button class="button is-black mt-5">Update Collection</button>
-        <button class="button-delete mt-3">Delete Collection</button>
+        <a href="{{ url('/collections/delete') }}" class="button button-delete mt-3">Delete Collection</a>
     </div>
 </form>
 @endsection

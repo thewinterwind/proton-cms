@@ -33,7 +33,7 @@ Route::get('/settings', function () {
     return view('settings');
 });
 
-Route::get('/video_feed', function () {
+Route::get('/video-feed', function () {
     return view('/video_feed/index');
 });
 
