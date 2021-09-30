@@ -6,12 +6,12 @@
     @slot('title') Post was successfully added! @endslot
 @endcomponent
 
-<div class="is-flex is-justify-content-space-between is-align-self-center">
+<div class="is-flex is-justify-content-space-between is-align-items-center mt-4">
     @component('components.title_type_3')
         @slot('title') Posts @endslot
     @endcomponent
 
-    <div class="pt-5">
+    <div>
         @component('components.button_type_3')
         @endcomponent
     </div>

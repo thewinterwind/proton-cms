@@ -5,7 +5,7 @@
 <div class="px-5 pb-5">
     <div class="is-flex is-justify-content-space-between">
         <h1>E-commerce</h1>
-        <a href="#" class="is-align-self-center">
+        <a href="{{ url('/collections/edit') }}" class="is-align-self-center">
             <label class="is-size-6">Edit <span class="pl-2"><img src="/images/edit.png"></span></label>
         </a>
     </div>

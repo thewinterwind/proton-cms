@@ -33,6 +33,10 @@ Route::get('/settings', function () {
     return view('settings');
 });
 
+Route::get('/video-feed', function () {
+    return view('/video_feed/index');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

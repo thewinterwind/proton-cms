@@ -12,7 +12,7 @@
 @endcomponent
 
 <div class="border-t">
-    <a href="#">
+    <a href="{{ url('/collections') }}">
         @component('components.dashboard')
             @slot('title') Collections @endslot
             @slot('num') 7 @endslot
