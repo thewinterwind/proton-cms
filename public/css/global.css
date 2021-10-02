@@ -319,7 +319,6 @@
   padding: 13px;
   margin-right: 8px;
   border-radius: 50%;
-  background-color: green;
 }
 #row_level_components .button-black {
   padding: 12px;
@@ -595,6 +594,10 @@
   box-shadow: none;
   border-radius: 0;
   border-color: transparent;
+}
+
+.ci-box input {
+  padding-left: 3.5rem !important;
 }
 
 .navbar-burger span:nth-child(2) {

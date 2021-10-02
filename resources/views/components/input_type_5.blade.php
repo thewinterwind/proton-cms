@@ -1,7 +1,7 @@
 <div class="box-container pt-0">
     <div class="field">
-        <label class="help">{{ $title }}</label>
-        <div class="control b-btm has-icons-left">
+        <label class="help ml-2">{{ $title }}</label>
+        {{-- <div class="control b-btm has-icons-left">
             <div class="select is-fullwidth">
                 <select>
                     <option selected>#78CB7C</option>
@@ -12,6 +12,35 @@
             <div class="icon is-small is-left">
                 <i class="c-color"></i>
             </div>
+        </div> --}}
+        <div class="ci-box control b-btm has-icons-left">
+            <div class="is-fullwidth">
+                <input class="input" type="text" name="" value="78CB7C" oninput="changeColor()">
+            </div>
+            <div class="icon is-left ml-3 has-text-black">
+                <i class="c-color"></i>
+                #
+            </div>
         </div>
     </div>
 </div>
+<script>
+    function changeColor() {
+        var colors = []
+        var i = 0
+
+        document.querySelectorAll('.ci-box').forEach((box)=>{
+            box.querySelectorAll('input').forEach((input)=>{
+                colors.push(input.value)
+            })
+
+            box.querySelectorAll('.c-color').forEach((circle, index)=>{
+                circle.style.backgroundColor = '#' + colors[index];
+            })
+        })
+    }
+
+    window.onload = function() {
+        this.changeColor();
+    };
+</script>
