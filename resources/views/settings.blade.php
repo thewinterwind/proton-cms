@@ -158,4 +158,32 @@
     @endcomponent
 </div>
 
+{{-- For color input fields --}}
+<script>
+    function changeColor() {
+        var colors = []
+        var i = 0
+
+        document.querySelectorAll('.ci-box').forEach((box, bIndex)=>{
+            box.querySelectorAll('input').forEach((input)=>{
+                colors.push(input.value)
+            })
+
+            box.querySelectorAll('.c-color').forEach((circle)=>{
+                circle.style.backgroundColor = '#' + colors[bIndex];
+            })
+        })
+    }
+
+    window.onload = function() {
+        this.changeColor();
+
+        document.querySelectorAll('.ci-box').forEach((box, bIndex)=>{
+            box.querySelectorAll('input').forEach((input)=>{
+                input.setAttribute("id", "input-" + (bIndex+1))
+            })
+        })
+    };
+</script>
+
 @endsection
