@@ -25,6 +25,10 @@ Route::get('/row-level-components', function () {
     return view('row_level_components');
 });
 
+Route::get('/components-desktop', function () {
+    return view('components_desktop');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
