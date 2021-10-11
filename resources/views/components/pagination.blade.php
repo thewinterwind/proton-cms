@@ -1,4 +1,4 @@
-<nav class="pagination" role="navigation" aria-label="pagination">
+<nav class="pagination mx-auto" role="navigation" aria-label="pagination">
     <a class="pagination-previous pl-0 ml-0">
         <img src="/images/page-left.png" class="arrow-page">
     </a>
