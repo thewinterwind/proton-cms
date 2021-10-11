@@ -26,6 +26,7 @@
                     <a class="navbar-item has-text-weight-semibold">
                         <span>Settings</span>
                     </a>
+                </div>
             </div>
         </nav>
     </div>
@@ -96,7 +97,7 @@
     </div>
 
     <div class="p-5 mt-6" style="border: 1px dashed black;">
-        <footer class="has-background-black">
+        <footer class="has-background-black" style="padding: 32px 120px;">
             <img src="/images/PROTON-white.png">
             <p class="text-gray mt-3">Dream big. Stay Curious. Be great. Do you</p>
 
@@ -112,7 +113,7 @@
         </footer>
 
         <div class="mt-5">
-            <footer class="has-background-black">
+            <footer class="has-background-black" style="padding: 32px 120px;">
                 <img src="/images/PROTON-white.png">
                 <p class="text-gray mt-3">Dream big. Stay Curious. Be great. Do you</p>
 

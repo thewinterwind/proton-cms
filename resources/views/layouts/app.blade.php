@@ -24,11 +24,11 @@
 
 <div id="app">
     <div id="row_level_components" >
-        {{-- @include('includes.navbar') --}}
+        @include('includes.navbar')
 
         @yield('content')
 
-        {{-- @include('includes.footer') --}}
+        @include('includes.footer')
     </div>
 
     @stack('js')
