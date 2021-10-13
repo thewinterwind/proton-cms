@@ -32,6 +32,22 @@
   font-size: 18px;
 }
 
+.w-small {
+  width: 101px !important;
+}
+
+.px-mobile {
+  padding: 0 24px;
+}
+
+.mt-large {
+  margin-top: 52%;
+}
+
+.text-black {
+  color: black;
+}
+
 body {
   font-family: Urbanist !important;
   background: white;
@@ -195,10 +211,6 @@ footer .text-gray {
   opacity: 0.7;
 }
 
-.mb-large {
-  margin-bottom: 5rem;
-}
-
 .padding-lrb {
   padding: 0 3rem 1rem 3rem;
 }
@@ -221,6 +233,7 @@ footer .text-gray {
   height: 56px;
   width: 100%;
   padding: 12px 82px;
+  cursor: pointer;
 }
 
 .p-32 {
@@ -236,6 +249,63 @@ footer .text-gray {
 .category-num label {
   color: #000000;
   opacity: 0.8;
+}
+
+.btn-close {
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+}
+
+.tabs {
+  margin-top: 2rem;
+}
+.tabs ul {
+  border-bottom-color: transparent;
+  border-bottom-style: none;
+}
+.tabs ul li {
+  border-bottom-color: transparent;
+  border-bottom-style: none;
+}
+.tabs ul li a {
+  padding: 0 0 12px 0;
+  margin-right: 48px;
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom-style: none;
+}
+.tabs ul li.is-active a {
+  border-bottom: 2px solid black;
+  color: black;
+  padding: 0 0 12px 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.button-delete {
+  color: #FF6363;
+  border: none;
+  background: transparent;
+  height: 56px;
+}
+
+.transparent-btn {
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  color: black;
+  background-color: transparent;
+  font-size: 16px;
+  border-radius: 0;
+  height: 56px;
+}
+
+.gray-btn {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0;
+  height: 56px;
+  font-weight: 600;
 }
 
 @media (min-width: 1024px) {
@@ -284,6 +354,35 @@ footer .text-gray {
   .category-num img {
     padding-left: 1.5rem;
   }
+
+  .mb-large {
+    margin-bottom: 5rem;
+  }
+
+  .mb-xlarge {
+    margin-bottom: 13rem;
+    margin-top: 1.5rem;
+  }
+
+  .box-container {
+    padding: 2rem;
+  }
+
+  .edit-link {
+    margin-left: 2rem;
+  }
+
+  .modal .modal-content {
+    width: 480px;
+  }
+
+  .inpt-search {
+    width: 320.9px;
+  }
+
+  .pl-none {
+    padding-left: 0;
+  }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
   .w-full {
@@ -291,6 +390,14 @@ footer .text-gray {
   }
 }
 @media (max-width: 1023px) {
+  .tabs ul li a {
+    margin-right: 24px;
+  }
+
+  .edit-link {
+    margin-left: auto;
+  }
+
   .google-icon {
     margin-right: 1rem;
     width: 6%;
@@ -746,30 +853,6 @@ footer .text-gray {
   #row_level_components .switch[type=checkbox]:checked + label::before, #row_level_components .switch[type=checkbox]:checked + label:before {
     background: #78CB7C;
   }
-  #row_level_components .transparent-btn {
-    border: 1px solid rgba(0, 0, 0, 0.2) !important;
-    color: black;
-    background-color: transparent;
-    font-size: 16px;
-    border-radius: 0;
-    height: 56px;
-  }
-  #row_level_components .gray-btn {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 0;
-    height: 56px;
-    font-weight: 600;
-  }
-  #row_level_components .button-delete {
-    color: #FF6363;
-    border: none;
-    background: transparent;
-    height: 56px;
-  }
-  #row_level_components .text-black {
-    color: black;
-  }
   #row_level_components .custom-dropdown .dropdown {
     display: block;
   }
@@ -798,29 +881,6 @@ footer .text-gray {
     width: 112px;
     height: 112px;
     background-color: #f5f6f7;
-  }
-  #row_level_components .tabs ul {
-    border-bottom-color: transparent;
-    border-bottom-style: none;
-  }
-  #row_level_components .tabs ul li {
-    border-bottom-color: transparent;
-    border-bottom-style: none;
-  }
-  #row_level_components .tabs ul li a {
-    padding: 0 0 12px 0;
-    margin-right: 24px;
-    color: rgba(0, 0, 0, 0.3);
-    font-weight: 600;
-    font-size: 18px;
-    border-bottom-style: none;
-  }
-  #row_level_components .tabs ul li.is-active a {
-    border-bottom: 2px solid black;
-    color: black;
-    padding: 0 0 12px 0;
-    font-weight: 600;
-    font-size: 18px;
   }
   #row_level_components .zip-modal .modal-card {
     height: 100%;

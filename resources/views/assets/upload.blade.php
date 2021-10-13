@@ -6,6 +6,11 @@
     @slot('title') Upload Asset @endslot
 @endcomponent
 
+<div class="box-container pt-0">
+    <label class="help">Asset Name</label>
+    <p class="has-text-weight-semibold">Estimate</p>
+</div>
+
 <div class="border-t">
     <div class="box-container">
         <label class="help">Description</label>
