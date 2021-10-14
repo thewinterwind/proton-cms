@@ -2,30 +2,57 @@
 
 @section('content')
 
-<div class="notification-red mb-4 is-size-6 is-flex">
+{{-- <div class="notification-red mb-4 is-size-6 is-flex">
     <img src="/images/attention_icon.png" class="mr-4">
     File Size Must be Less Than 100MB.
-</div>
+</div> --}}
 
-@component('components.title_type_3')
-    @slot('title') Upload Asset @endslot
-@endcomponent
+<div class="container nav-screen mb-large">
+    <div class="columns is-variable is-1-desktop m-0">
+        <div class="column is-4-desktop p-0">
+            <div class="box-container pt-0 pl-none">
+                <h1>Upload Asset</h1>
+            </div>
 
-@component('components.input_type_1')
-    @slot('title') Asset Name @endslot
-@endcomponent
+            <div class="box-container pt-0 pl-none">
+                <label class="help mt-0 pl-3">Asset Name</label>
+                <div class="control b-btm">
+                    <input class="input" type="text">
+                </div>
+            </div>
 
-@component('components.input_type_4')
-    @slot('title') Description (Optional) @endslot
-@endcomponent
+            <div class="is-hidden-desktop">
+                <div class="box-container pt-0 pl-none">
+                    <div class="field">
+                        <label class="help pb-2 pl-2">Description (Optional)</label>
+                        <textarea class="textarea" rows="6"></textarea>
+                    </div>
+                </div>
+            </div>
 
-@component('components.input_type_3')
-    @slot('title') Collections @endslot
-@endcomponent
+            <div class="box-container pt-0 pl-none">
+                <label class="help mt-0 pl-3">Collections</label>
+                <div class="control b-btm has-icons-right">
+                    <input class="input" type="tags" placeholder="Add Tag" value="Tag1,Tag2" style="width: 108px;">
+                    <span class="icon is-small is-right">
+                        <img src="/images/ok_icon_success.png">
+                    </span>
+                </div>
+            </div>
 
-<div class="box-container">
-    <button class="transparent-btn button btm-modal is-fullwidth mb-5">Select Asset</button>
-    <button class="gray-btn button is-fullwidth">Upload</button>
+            <div class="box-container pl-none">
+                <button class="transparent-btn button btm-modal is-fullwidth mb-5">Select Asset</button>
+                <button class="gray-btn button is-fullwidth">Upload</button>
+            </div>
+        </div>
+        <div class="column is-4-desktop p-0">
+            <div class="is-hidden-touch mt-6 pt-5">
+                @component('components.input_type_4')
+                    @slot('title') Description (Optional) @endslot
+                @endcomponent
+            </div>
+        </div>
+    </div>
 </div>
 
 <div id="btm-modal" class="btm-modal modal is-justify-content-flex-end">
