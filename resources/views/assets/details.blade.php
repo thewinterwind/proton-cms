@@ -5,9 +5,11 @@
     <div class="columns is-variable is-1-desktop m-0">
         <div class="column is-4-desktop p-0">
             <div class="box-container pt-0 pl-none">
-                <h1>Asset Details</h1>
+                @component('components.title_type_3')
+                    @slot('title') Asset Details @endslot
+                @endcomponent
 
-                <div class="is-flex">
+                <div class="is-flex pt-5">
                     <img class="upload-modal" src="/images/zip_file.png">
                     <div class="is-align-self-center ml-4">
                         <label class="help">Asset ID</label>
@@ -46,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="column is-4-desktop p-0">
+        <div class="column is-4-desktop p-0 margin-left-column">
             <div class="is-hidden-touch mt-large">
                 @component('components.input_type_4')
                     @slot('title') Description (Optional) @endslot

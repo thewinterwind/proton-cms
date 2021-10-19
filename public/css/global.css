@@ -33,7 +33,7 @@
 }
 
 .mt-large {
-  margin-top: 52%;
+  margin-top: 57%;
 }
 
 .text-black {
@@ -366,6 +366,34 @@ footer .text-gray {
   margin-right: 0.375em;
   transition: 0.25s ease;
   box-shadow: inset 0 0 0 0.125em rgba(0, 0, 0, 0.3);
+}
+
+.upload-btns {
+  background: #F5F6F7;
+  color: rgba(0, 0, 0, 0.3);
+  height: 56px;
+  border-radius: 0;
+  border: none;
+}
+
+button.text-gray {
+  border: none;
+}
+
+progress.show-value {
+  position: relative;
+}
+
+progress.show-value:after {
+  content: attr(value) "% Uploaded";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1rem;
+  margin-top: 20px;
 }
 
 @media (min-width: 1024px) {
@@ -937,30 +965,6 @@ footer .text-gray {
     max-height: 30px;
     max-width: 30px;
     background-color: transparent;
-  }
-  #row_level_components .upload-btns {
-    background: #F5F6F7;
-    color: rgba(0, 0, 0, 0.3);
-    height: 56px;
-    border-radius: 0;
-    border: none;
-  }
-  #row_level_components button.text-gray {
-    border: none;
-  }
-  #row_level_components progress.show-value {
-    position: relative;
-  }
-  #row_level_components progress.show-value:after {
-    content: attr(value) "% Uploaded";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1rem;
-    margin-top: 20px;
   }
   #row_level_components .tab-pane {
     display: none;
