@@ -6,7 +6,6 @@
     <img src="/images/attention_icon.png" class="mr-4">
     Username and Password Don't Match
 </div> --}}
-    <div class="modal-background"></div>
 
 <div class="columns is-centered is-vcentered m-0">
     <div class="column is-4 has-background-white">

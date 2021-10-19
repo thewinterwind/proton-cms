@@ -2,9 +2,11 @@
 
 @section('content')
 
-@component('components.title_type_3')
-    @slot('title') Upload Asset @endslot
-@endcomponent
+<div class="box-container pt-0">
+    @component('components.title_type_3')
+        @slot('title') Upload Asset @endslot
+    @endcomponent
+</div>
 
 <div class="box-container pt-0">
     <label class="help">Asset Name</label>

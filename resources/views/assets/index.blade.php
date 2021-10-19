@@ -8,7 +8,9 @@
 
 <div class="container nav-screen px-mobile">
     <div class="is-flex is-justify-content-space-between py-5">
-        <h1>Assets</h1>
+        @component('components.title_type_3')
+            @slot('title') Assets @endslot
+        @endcomponent
         <button class="button-black small-btn w-small">Upload</button>
     </div>
 
