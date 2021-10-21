@@ -45,13 +45,13 @@
     </div>
 </div>
 
-<div class="is-hidden-desktop">
+<div class="box-container pt-0 is-hidden-desktop">
     @component('components.sort')
         @slot('title') Title @endslot
     @endcomponent
 </div>
 
-<div class="tab-content container nav-screen mb-xlarge">
+<div class="tab-content container nav-screen mb-large">
     <div class="tab-pane is-active" id="All">
         <div class="is-flex-desktop is-flex-wrap-wrap mt-4">
             @for ($i = 0; $i < 6; $i++)

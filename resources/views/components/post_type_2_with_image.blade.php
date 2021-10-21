@@ -1,4 +1,4 @@
-<div class="is-flex is-align-items-center box-container pt-0">
+<div class="is-flex is-align-items-center">
     <div class="mr-5">
         <img src="/images/category-img-dekstop.png" class="category-img-full">
     </div>

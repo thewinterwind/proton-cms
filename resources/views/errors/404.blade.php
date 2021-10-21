@@ -70,7 +70,7 @@
 </head>
     <body>
         @include('includes.navbar')
-        <div class="container-error">
+        <div class="container-error mb-large">
             <h1>404</h1>
             <p>Sorry, it looks like that page doesn't exist.</p>
             <button class="btn-back">Go Back</button>

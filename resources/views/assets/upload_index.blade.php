@@ -7,7 +7,7 @@
     File Size Must be Less Than 100MB.
 </div> --}}
 
-<div class="container nav-screen mb-large">
+<div class="container nav-screen mb-large pb-4">
     <div class="columns is-variable is-1-desktop m-0">
         <div class="column is-4-desktop p-0">
             <div class="box-container pt-0 pl-none">

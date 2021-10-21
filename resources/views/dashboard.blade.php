@@ -5,9 +5,7 @@
 <div class="container nav-screen mb-large pb-5">
     <div class="is-flex-desktop is-justify-content-space-between pt-5">
         <h1 class="is-hidden-touch is-size-3 has-text-weight-semibold">Dashboard</h1>
-        @component('components.button_type_1')
-            @slot('title') New Post @endslot
-        @endcomponent
+        <button class="button-black is-size-6 is-fullwidth inverted w-small">New Post</button>
     </div>
 
     <div class="is-flex-desktop is-flex-wrap-wrap mt-5 mb-6">

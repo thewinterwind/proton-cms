@@ -9,7 +9,7 @@
 
     <div class="is-flex-desktop is-flex-wrap-wrap">
         @for ($i = 0; $i < 4; $i++)
-            <div class="column is-half border-t padding-lrb pt-5 @if($i % 2) border-l-desktop @endif @if($i > 1) border-t-desktop @endif">
+            <div class="column is-half border-t padding-lrb box-container pt-5 @if($i % 2) border-l-desktop @endif @if($i > 1) border-t-desktop @endif">
                 {{-- @component('components.post_type_2')
                     @slot('category') Finance @endslot
                     @slot('time') 8 @endslot

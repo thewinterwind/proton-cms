@@ -6,7 +6,7 @@
     @slot('title') Collection was successfully added! @endslot
 @endcomponent --}}
 <div class="container nav-screen mb-xlarge">
-    <div class="is-flex is-justify-content-space-between is-align-items-center">
+    <div class="is-flex is-justify-content-space-between is-align-items-center box-container py-0">
         <h2 class="is-size-3 has-text-weight-semibold">Collections</h2>
         <a href="{{ url('/collections/create') }}" class="is-hidden-tablet">
             <label class="is-size-6">New <span class="pl-2">+</span></label>
@@ -70,7 +70,7 @@
                     </div>
                 </div>
 
-                <div class="mt-2 mb-5">
+                <div class="box-container py-0 mt-2 mb-5">
                     @component('components.button_type_1')
                         @slot('title') Create Collection @endslot
                     @endcomponent
