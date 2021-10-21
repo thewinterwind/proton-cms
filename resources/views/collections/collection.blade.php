@@ -2,17 +2,17 @@
 
 @section('content')
 
-<div class="container nav-screen">
+<div class="container nav-screen box-container py-0 px-0-desktop">
     <div class="is-flex is-align-items-center">
         <h1>E-commerce</h1>
         <a href="#" class="edit-link edit-collection">
             <label class="is-size-6">Edit <span class="pl-2"><img src="/images/edit.png"></span></label>
         </a>
     </div>
-    <label class="help fs-14">Created on 08 Aug, 2021</label>
+    <label class="help fs-14 is-hidden-touch">Created on 08 Aug, 2021</label>
 
     <div class="is-flex is-justify-content-space-between is-align-items-center mt-4">
-        <div class="tabs">
+        <div class="tabs mt-0-mobile">
             <ul>
                 <li class="is-active"><a id="All"><span>All</span></a></li>
                 <li><a id="Assets"><span>Assets</span></a></li>
@@ -20,12 +20,7 @@
             </ul>
         </div>
 
-        <div class="is-hidden-desktop">
-            @component('components.sort')
-                @slot('title') A to Z @endslot
-            @endcomponent
-        </div>
-        <div class="custom-radio control">
+        <div class="custom-radio control is-hidden-touch">
             <label class="radio is-inline-flex has-text-black">
                 <input type="radio" name="foobar" checked>
                 By A to Z
@@ -40,19 +35,24 @@
             </label>
         </div>
     </div>
+    <div class="mb-5 is-hidden-desktop">
+        @component('components.sort')
+            @slot('title') A to Z @endslot
+        @endcomponent
+    </div>
 </div>
 
-<div class="container is-max-widescreen mb-xlarge">
+<div class="container is-max-widescreen mb-large pb-3">
     <div class="tab-content">
         <div class="tab-pane is-active" id="All">
             <div class="is-flex-desktop is-flex-wrap-wrap">
                 @for ($i = 0; $i < 4; $i++)
-                    <div class="column is-half border-t padding-lrb pt-5 @if($i % 2) border-l-desktop @endif @if($i > 1) border-t-desktop @endif">
+                    <div class="column is-half border-t padding-lrb box-container pt-5 @if($i % 2) border-l-desktop @endif @if($i > 1) border-t-desktop @endif">
                         <a href="#">
                             <div class="is-flex is-align-self-center">
                                 <div class="is-flex-grow-2">
-                                    <h2 class="is-size-4">Online Marketing</h2>
-                                    <label>Based on electronic technologies</label>
+                                    <h2 class="is-size-1-desktop is-size-4">Online Marketing</h2>
+                                    <label class="is-size-4-desktop">Based on electronic technologies</label>
                                 </div>
                                 <div class="is-align-self-center">
                                     <img src="/images/delete_icon.png" class="trash-icon">
@@ -150,7 +150,7 @@
                     </div>
                 </div>
 
-                <div class="has-text-centered mt-2">
+                <div class="box-container pt-0 has-text-centered mt-2">
                     @component('components.button_type_1')
                         @slot('title') Update Collection @endslot
                     @endcomponent
@@ -174,7 +174,7 @@
                 <p class="p-sen text-gray">Deleting this collection will not delete any associated media or posts. However, this will delete the association of this collection with any content. Are you sure you want to delete this collection? If so, type the name of the tag below and press the delete button.</p>
             </div>
 
-            <form class="mb-4 pb-5">
+            <form class="box-container pt-0 mb-4 pb-5">
                 <div class="mt-5">
                     @component('components.input_type_1')
                         @slot('title') URL Slug @endslot

@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="is-hidden-desktop">
+    <div class="box-container pt-0 is-hidden-desktop">
         @component('components.sort')
             @slot('title') Title @endslot
         @endcomponent

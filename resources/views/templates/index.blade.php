@@ -10,21 +10,21 @@
 
         <button class="button-black small-btn w-small">Add New</button>
     </div>
-    <div class="tabs mt-4 mb-5">
+    <div class="tabs mt-5">
         <ul>
             <li class="is-active"><a id="All"><span>All</span></a></li>
             <li><a id="Fragment"><span>Fragment</span></a></li>
             <li><a id="Page"><span>Page</span></a></li>
             <li><a id="Script"><span>Script</span></a></li>
-            <li><a id="Style">Style</a></li>
+            <li><a id="Style" class="mr-0">Style</a></li>
         </ul>
     </div>
 </div>
 
-<div class="container nav-screen mb-large">
+<div class="container nav-screen mb-large pb-1">
     <div class="tab-content">
         <div class="tab-pane is-active" id="All">
-            <div class="is-flex-desktop is-flex-wrap-wrap my-6">
+            <div class="is-flex-desktop is-flex-wrap-wrap mt-5 mb-6">
                 @for ($i = 0; $i < 4; $i++)
                     <div class="column is-half border-t padding-lrb box-container pt-5 @if($i % 2) border-l-desktop @endif @if($i > 1) border-t-desktop @endif">
                         <div class="is-flex is-justify-content-space-between">

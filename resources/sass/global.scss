@@ -13,6 +13,9 @@
     .inverted {
         filter: invert(1) hue-rotate(180deg);
     }
+    .navbar .navbar-start .navbar-item, .navbar .navbar-end .navbar-item {
+        color: black;
+    }
 }
 
 .border-dashed {
@@ -416,6 +419,9 @@ progress.show-value:after {
                 display: block;
                 padding-right: 36px;
             }
+            a.navbar-item:hover {
+                background-color: transparent;
+            }
             .active {
                 color: black;
             }
@@ -500,6 +506,10 @@ progress.show-value:after {
     .margin-left-column {
         margin-left: 3rem;
     }
+    .px-0-desktop {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 }
 
 @media only screen
@@ -516,6 +526,7 @@ progress.show-value:after {
 
 @media(max-width: 1023px) {
     .tabs {
+        margin-top: 0;
         ul {
             li {
                 a {

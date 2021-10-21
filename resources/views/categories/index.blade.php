@@ -2,9 +2,11 @@
 
 @section('content')
 <div class="categories container is-max-widescreen mb-large">
-    @component('components.title_type_3')
-        @slot('title') Categories @endslot
-    @endcomponent
+    <div class="box-container py-0">
+        @component('components.title_type_3')
+            @slot('title') Categories @endslot
+        @endcomponent
+    </div>
 
     <div class="is-flex-desktop is-flex-wrap-wrap mt-5">
         @for ($i = 0; $i < 9; $i++)

@@ -17,8 +17,8 @@
                 </div>
 
                 <div class="mt-6">
-                    <h3 class="fs-18 has-text-weight-semibold has-text-black pb-3">Type</h3>
-                    <div class="columns">
+                    <h3 class="fs-18 has-text-weight-semibold has-text-black">Type</h3>
+                    <div class="columns mt-2">
                         <div class="column is-5-desktop">
                             @component('components.multiple_selection_active')
                             @slot('title') Fragment @endslot
